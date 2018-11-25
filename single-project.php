@@ -5,6 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package seed
+ * iworn edit
  */
 
 get_header(); ?>
