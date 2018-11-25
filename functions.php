@@ -36,5 +36,5 @@ function berry_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'berry_scripts' , 20 );
-/* iworn require ACF 5*/
+/* iworn require ACF 5 */
 define('ACF_EARLY_ACCESS','5');
