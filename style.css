@@ -1,0 +1,133 @@
+/*
+ Theme Name:   Polngan
+ Description:  Plant Child Theme
+ Author:       SeedThemes
+ Template:     plant
+ Version:      1.0.0
+*/
+
+
+/* HEADER */ 
+
+.site-desktop-navigation {
+	margin: 20px 0 5px;
+}
+
+.site-desktop-navigation li a {
+	padding: 3px 0;
+	margin: 10px 12px;
+	height: auto;
+}
+
+.site-desktop-navigation .current-menu-item a {
+	color: #888;
+	border-bottom: 1px dotted #ccc;
+}
+.site-header-space {
+	margin-bottom: 15px;
+}
+
+/* ARCHIVE */
+
+.content-item.-caption {
+	background-color: #ff6600;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.content-item.-caption .info {
+	background: none;
+	top: 50%;
+	bottom: auto;
+	transform: translate(0, -50%);
+	opacity: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.content-item.-caption img {
+	transition: 0.5s;
+}
+
+.content-item.-caption:hover .info {
+	opacity: 1;
+}
+
+.content-item.-caption:hover img {
+	transform: scale(1.2);
+	filter: sepia(1);
+	opacity: 0.4;
+}
+
+.content-pagination {
+	text-align: center;
+}
+
+
+
+/* SINGLE */
+
+.entry-img img {
+	width: 100%;
+}
+
+body.single .entry-title {
+	background-color: #ff6600;
+	color: #fff;
+	display: inline-block;
+	padding: 6px 15px 4px;
+	margin: 30px 0;
+}
+body.single .site-header-space {
+	margin-bottom: 0;
+}
+.project-color{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+}
+
+
+
+/* FOOTER */
+
+.site-footer {
+	background: none;
+}
+
+.site-info {
+	color: #888;
+}
+
+
+
+
+@media (min-width: 992px) {
+	.site-title, .site-branding, .site-description, .site-desktop-navigation, .site-logo, .site-logo img {
+		float: none;
+	}
+	
+	.site-header {
+		box-shadow: none;
+		text-align: center;
+	}
+	
+	.site-title {
+		line-height: 1.2;
+		font-size: 28px;
+	}
+	
+	.site-description {
+		padding: 0;
+		height: auto;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-size: 14px;
+	}
+	
+	.site-logo img {
+		height: auto;
+		margin: 30px 10px 10px 0;
+	}
+}
