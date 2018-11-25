@@ -1,6 +1,6 @@
 {
     "files.autoSave": "afterDelay",
-    //เรากำลังใช้ ฟอนต์ไทยชื่อ Arhiti ที่โหลดจาก Google Font
+    //เราสามารถใช้ฟอนต์ไทยชื่อ Arhiti ที่โหลดจาก Google Font ได้ด้วยนะ
     "editor.fontFamily": "Monoid, 'Courier New', monospace",
     // @font-face rule must define 'src' and 'font-family' properties
     "css.lint.fontFaceProperties": "warning"
