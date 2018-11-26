@@ -92,9 +92,14 @@ body.single .site-header-space {
 	border-radius: 50%;
 	
 }
-#anim-avatar {
+#anim-avatar img{
 border-radius: 50%
 
+}
+
+/*taxonomy text aline center*/
+.table .table-bordered th{
+text-align: center;
 }
 
 /*TERM Post type*/
