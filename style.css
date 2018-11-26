@@ -3,7 +3,7 @@
  Description:  Plant Child Theme
  Author:       SeedThemes
  Template:     plant
- Version:      1.0.0
+ Version:      1.0.2
 */
 
 
@@ -96,7 +96,7 @@ body.single .site-header-space {
 /*TERM Post type*/
 p.table-bordered, .table-bordered a{ 
 	color: #343954
-	background-color: rgba(206, 206, 206, 0.3);
+	background-color: rgba(206, 206, 206, 03);
 	mix-blend-mode: difference;
 }
 

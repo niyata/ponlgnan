@@ -33,19 +33,9 @@ get_header(); ?>
 							<table class="table table-bordered">
 							
 							<!-- add author -->
-							<?php if( have_rows('repeater', 'user_1') ): ?>
-								<ul>
-								<?php while( have_rows('repeater', 'user_1') ): the_row(); ?>
-								<li><?php the_sub_field('title'); ?></li>
-							<?php endwhile; ?>
-							</ul>
-							<?php endif; ?>
-							<?php
-								$author_id = get_the_author_meta('ID');
-								$author_badge = get_field('author_badge', 'user_'. $author_id );?>
-								<tr><th>
-									<img src="<?php echo $author_badge['url']; ?>" alt="<?php echo $author_badge['alt']; ?>" /></td></tr>
-							<!-- end author -->								
+							<tr><th><?php ?> </th>
+							<td><p><?php echo get_the_author_meta('nickname') ?></p></td></tr>
+							<!-- end author -->					
 							
 								<tr><th>Year</th><td><?php the_field('year'); ?></td></tr> 	
 								
