@@ -34,7 +34,7 @@ get_header(); ?>
 							
 							<!-- add avatar , author -->
 							<tr><th><?php echo get_avatar(get_the_author_meta('ID'), 128 )?> </th>
-							<td><p><?php echo get_the_author_meta('nickname') ?></p></td></tr>
+							<td><p style="text-transform:uppercase;"><?php echo get_the_author_meta('nickname') ?></p></td></tr>
 							<!-- end avatar , author -->					
 							
 								<tr><th>Year</th><td><?php the_field('year'); ?></td></tr> 	
