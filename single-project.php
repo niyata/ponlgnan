@@ -33,7 +33,7 @@ get_header(); ?>
 							<table class="table table-bordered">
 							
 							<!-- add avatar , author -->
-							<tr><th><?php echo get_avatar(get_the_author_meta('ID'), 128 )?> </th>
+							<tr><th id="anim-avatar"><?php echo get_avatar(get_the_author_meta('ID'), 128 )?> </th>
 							<td><p style="text-transform:uppercase;"><?php echo get_the_author_meta('nickname') ?></p></td></tr>
 							<!-- end avatar , author -->					
 							

@@ -92,12 +92,17 @@ body.single .site-header-space {
 	border-radius: 50%;
 	
 }
+#anim-avatar {
+border-radius: 50%
+
+}
 
 /*TERM Post type*/
 p.table-bordered, .table-bordered a{ 
 	color: #343954
-	background-color: rgba(206, 206, 206, 03);
+	background-color : rgba(206, 206, 206, 03);
 	mix-blend-mode: difference;
+
 }
 
 /* FOOTER */
