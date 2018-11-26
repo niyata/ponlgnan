@@ -92,6 +92,10 @@ body.single .site-header-space {
 	border-radius: 50%;
 	
 }
+table.author-show td {
+	text-transform:uppercase;
+	font-style: bold;
+}
 #anim-avatar img{
 border-radius: 50%
 
@@ -103,7 +107,7 @@ text-align: center;
 }
 
 /*TERM Post type*/
-p.table-bordered, .table-bordered a{ 
+table.table-bordered p, table.table-bordered a{ 
 	color: #343954
 	background-color : rgba(206, 206, 206, 03);
 	mix-blend-mode: difference;
