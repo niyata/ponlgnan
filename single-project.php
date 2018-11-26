@@ -33,8 +33,9 @@ get_header(); ?>
 							<table class="table table-bordered">
 							
 							<!-- add avatar , author -->
-							<tr><th id="anim-avatar"><?php echo get_avatar(get_the_author_meta('ID'), 128 )?> </th>
-							<td class="author-show"><strong>สร้างสรรค์โดย:&nbsp;<?php echo get_the_author_meta('nickname') ?></strong></p></td></tr>
+							<tr><th id="anim-avatar"><?php echo get_avatar(get_the_author_meta('ID'), 76 )?> </th>
+							<td class="author-show"><strong>สร้างสรรค์โดย:&nbsp;<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
+							<?php echo get_the_author_meta('nickname') ?></a></strong></p></td></tr>
 							<!-- end avatar , author -->					
 							
 								<tr><th>Year</th><td><?php the_field('year'); ?></td></tr> 	
