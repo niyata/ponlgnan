@@ -32,12 +32,27 @@ get_header(); ?>
 						<div class="col-sm-3">
 							<table class="table table-bordered">
 							
-								<tr><th>Year</th><td><?php the_field('year'); ?></td></tr>
+							<!-- add author -->
+							<?php if( have_rows('repeater', 'user_1') ): ?>
+								<ul>
+								<?php while( have_rows('repeater', 'user_1') ): the_row(); ?>
+								<li><?php the_sub_field('title'); ?></li>
+							<?php endwhile; ?>
+							</ul>
+							<?php endif; ?>
+							<?php
+								$author_id = get_the_author_meta('ID');
+								$author_badge = get_field('author_badge', 'user_'. $author_id );?>
+								<tr><th>
+									<img src="<?php echo $author_badge['url']; ?>" alt="<?php echo $author_badge['alt']; ?>" /></td></tr>
+							<!-- end author -->								
+							
+								<tr><th>Year</th><td><?php the_field('year'); ?></td></tr> 	
 								
 								<?php   
 									$terms = get_the_terms( $post->ID , 'project_category' );
 									if ( $terms != null ){
-										echo '<tr><th>Service</th><td>';
+										echo '<tr><th>Division</th><td>';
 										foreach( $terms as $term ) {
 											if (($term->slug) != 'featured') {
 												echo '<a href="'. get_term_link( $term ) .'" style="color:'.get_field('color').'";>'. $term->name .'</a><br>';
@@ -49,9 +64,9 @@ get_header(); ?>
 								?>
 								
 								<?php   // 
-									$terms = get_the_terms( $post->ID , 'client' );
+									$terms = get_the_terms( $post->ID , 'artist' );
 									if ( $terms != null ){
-										echo '<tr><th>Client</th><td>';
+										echo '<tr><th>Artist</th><td>';
 										foreach( $terms as $term ) {
 											echo '<a href="'. get_term_link( $term ) .'" style="color:'.get_field('color').'";>'. $term->name .'</a><br>';
 										}

@@ -63,7 +63,10 @@
 	text-align: center;
 }
 
-
+/* NAV MOBILE */
+.site-mobile-navigation.-dropdown.active, .sb-slidebar{
+	background-color: #343954!important;
+}
 
 /* SINGLE */
 
@@ -77,6 +80,7 @@ body.single .entry-title {
 	display: inline-block;
 	padding: 6px 15px 4px;
 	margin: 30px 0;
+	
 }
 body.single .site-header-space {
 	margin-bottom: 0;
@@ -86,9 +90,15 @@ body.single .site-header-space {
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
+	
 }
 
-
+/*TERM Post type*/
+p.table-bordered, .table-bordered a{ 
+	color: #343954
+	background-color: rgba(206, 206, 206, 0.3);
+	mix-blend-mode: difference;
+}
 
 /* FOOTER */
 
