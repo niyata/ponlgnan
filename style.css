@@ -98,7 +98,7 @@ border-radius: 50%
 }
 
 /*taxonomy text aline center*/
-.table .table-bordered th{
+th.table-bordered{
 text-align: center;
 }
 

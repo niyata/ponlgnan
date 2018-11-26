@@ -54,9 +54,9 @@ get_header(); ?>
 								?>
 								
 								<?php   // 
-									$terms = get_the_terms( $post->ID , 'artist' );
+									$terms = get_the_terms( $post->ID , 'anim_project_name' );
 									if ( $terms != null ){
-										echo '<tr><th>Artist</th><td>';
+										echo '<tr><th>Projects</th><td>';
 										foreach( $terms as $term ) {
 											echo '<a href="'. get_term_link( $term ) .'" style="color:'.get_field('color').'";>'. $term->name .'</a><br>';
 										}
