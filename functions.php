@@ -38,3 +38,19 @@ function berry_scripts() {
 add_action( 'wp_enqueue_scripts', 'berry_scripts' , 20 );
 /* iworn require ACF 5 */
 define('ACF_EARLY_ACCESS','5');
+
+/**
+ * Put icon before the post title by iWorn
+ * you can create custom field for icon field by category taxonomy
+ * @see https://www.engagewp.com/how-to-add-icon-before-post-title-wordpress/
+ */
+function anim_icon_before_title( $title, $id = null ) {
+
+    if(get_post_meta($id, 'icon_before_title_url', true)) {
+        $img_source = get_post_meta(get_the_ID(), 'icon_before_title_url', true);
+        $title = '<img class="icon_title" src="'. $img_source .'" />' . $title;
+   }
+
+    return $title;
+}
+add_filter( 'the_title', 'anim_icon_before_title', 10, 2 ); /* end put icon */
