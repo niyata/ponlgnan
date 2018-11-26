@@ -32,10 +32,10 @@ get_header(); ?>
 						<div class="col-sm-3">
 							<table class="table table-bordered">
 							
-							<!-- add author -->
-							<tr><th><?php ?> </th>
+							<!-- add avatar , author -->
+							<tr><th><?php echo get_avatar(get_the_author_meta('ID'), 128 )?> </th>
 							<td><p><?php echo get_the_author_meta('nickname') ?></p></td></tr>
-							<!-- end author -->					
+							<!-- end avatar , author -->					
 							
 								<tr><th>Year</th><td><?php the_field('year'); ?></td></tr> 	
 								
