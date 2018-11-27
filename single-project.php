@@ -16,7 +16,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<div class="entry-img"><?php the_post_thumbnail('large'); ?></div>
+						<div class="entry-img"><?php the_post_thumbnail('full'); ?></div>
 						
 			<div class="container">
 				<header class="entry-header">

@@ -5,8 +5,8 @@
  */
 function berry_setup() {
 	add_theme_support( 'custom-logo', array(
-		'width'       => 120,
-		'height'      => 120,
+		'width'       => 80, 
+		'height'      => 80, 
 		'flex-width' => true,
 		) );
 	set_post_thumbnail_size( 370, 237, TRUE );
