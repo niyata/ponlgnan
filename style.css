@@ -85,6 +85,25 @@ body.single .entry-title {
 body.single .site-header-space {
 	margin-bottom: 0;
 }
+
+/* pagination */
+.post-type-pagination{
+	display: block;
+	margin: 0;
+	vertical-align: middle;
+	font-size: 14px;
+	line-height: 22px;
+
+}
+a.single-pre{
+	float: left;
+	text-align:left;
+}
+a.single-next{
+	float: right;
+	text-align:right;
+}
+/* project box */
 .project-color{
 	display: inline-block;
 	width: 16px;
@@ -110,7 +129,7 @@ text-align: center;
 table.table-bordered p, table.table-bordered a{ 
 	color: #343954
 	background-color : rgba(206, 206, 206, 03);
-	mix-blend-mode: difference;
+	/*mix-blend-mode: difference;*/
 
 }
 

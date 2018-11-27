@@ -10,14 +10,14 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="entry-img"><?php the_post_thumbnail('full'); ?></div>
-			
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<div class="entry-img"><?php the_post_thumbnail('large'); ?></div>
+						
 			<div class="container">
 				<header class="entry-header">
 					<h1 class="entry-title" style="background-color: <?php the_field('color'); ?>;"><?php the_title(); ?></h1>
@@ -27,6 +27,20 @@ get_header(); ?>
 					<div class="row">
 						<div class="col-sm-9">
 							<?php the_content(); ?>
+							<div class="post-type-pagination">
+								<?php $prev_post = get_previous_post();
+									if($prev_post) {
+									$prev_title = strip_tags(str_replace('"', '', $prev_post->post_title));
+									echo "\t" . '<a rel="prev" href="' . get_permalink($prev_post->ID) . '" title="' . $prev_title. '" class="single-pre">&laquo; Previous post<br /><strong>&quot;'. $prev_title . '&quot;</strong></a>' . "\n";
+									}
+
+									$next_post = get_next_post();
+									if($next_post) {
+									$next_title = strip_tags(str_replace('"', '', $next_post->post_title));
+									echo "\t" . '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class="single-next">Next post &raquo;<br /><strong>&quot;'. $next_title . '&quot;</strong></a>' . "\n";
+									}
+								?>	</div>
+							
 						</div>
 						
 						<div class="col-sm-3">
@@ -82,5 +96,7 @@ get_header(); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
+
+
 
 <?php get_footer(); ?>
