@@ -30,7 +30,6 @@ add_action( 'widgets_init', 'berry_remove_sidebar', 11 );
 function berry_scripts() {
 
 	wp_dequeue_style( 'seed-style');
-
 	wp_enqueue_style( 'berry-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'berry-main', get_stylesheet_directory_uri() . '/js/main.js', array(), '2016-1', true );
 
@@ -42,7 +41,7 @@ define('ACF_EARLY_ACCESS','5');
 /**
  * Put icon before the post title by iWorn
  * you can create custom field for icon field by category taxonomy
- * @see https://www.engagewp.com/how-to-add-icon-before-post-title-wordpress/
+ * @see https://www.engagewp.com/how-to-add-icon-before-post-title-wordpress/ and @see https://www.wp-tweaks.com/put-image-before-the-post-title-wordpress/
  */
 function anim_icon_before_title( $title, $id = null ) {
 
