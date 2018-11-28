@@ -32,6 +32,7 @@ function berry_scripts() {
 	wp_dequeue_style( 'seed-style');
 	wp_enqueue_style( 'berry-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'berry-main', get_stylesheet_directory_uri() . '/js/main.js', array(), '2016-1', true );
+	wp_enqueue_script( 'berry-main', get_stylesheet_directory_uri() . '/js/sketchfab-viewer-1.3.1.js', array(), '2016-1', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'berry_scripts' , 20 );
@@ -53,3 +54,12 @@ function anim_icon_before_title( $title, $id = null ) {
     return $title;
 }
 add_filter( 'the_title', 'anim_icon_before_title', 10, 2 ); /* end put icon */
+
+/**
+ * Anim function Allow SVG through WordPress Media Uploader
+ */
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+  }
+  add_filter('upload_mimes', 'cc_mime_types');
