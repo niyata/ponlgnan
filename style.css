@@ -179,7 +179,7 @@ table.table-bordered p, table.table-bordered a{
 * Font
 */
 
-body {
+body.col-sm-9 {
     font-family: "Trirong", sans-serif;
     font-size: 17px;
     line-height: 1.6;
