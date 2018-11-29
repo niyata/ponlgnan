@@ -174,3 +174,13 @@ table.table-bordered p, table.table-bordered a{
 		margin: 30px 10px 10px 0;
 	}
 }
+
+/** 
+* Font
+*/
+
+body {
+    font-family: "Trirong", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
