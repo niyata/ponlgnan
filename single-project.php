@@ -46,7 +46,7 @@ get_header(); ?>
 						<div class="col-sm-3">
 							<table class="table table-bordered">
 							
-							<!-- add avatar , author -->
+							<!-- add anim avatar , author -->
 							<tr><th id="anim-avatar"><?php echo get_avatar(get_the_author_meta('ID'), 76 )?> </th>
 								<td><span class="author-show">
 										<strong>สร้างสรรค์โดย:&nbsp;
@@ -56,14 +56,14 @@ get_header(); ?>
 									</span>
 								</td>
 							</tr>
-							<!-- end avatar , author -->					
+							<!-- end anim avatar , author -->					
 							
 								<tr><th>Year</th><td><?php the_field('year'); ?></td></tr> 	
 								
 								<?php   
 									$terms = get_the_terms( $post->ID , 'project_category' );
 									if ( $terms != null ){
-										echo '<tr><th>Type</th><td>';
+										echo '<tr><th>Style</th><td>';
 										foreach( $terms as $term ) {
 											if (($term->slug) != 'featured') {
 												echo '<a href="'. get_term_link( $term ) .'" style="color:'.get_field('color').'";>'. $term->name .'</a><br>';
@@ -73,11 +73,13 @@ get_header(); ?>
 										echo '</td></tr>';
 									} 
 								?>
-								
-								<?php  // 
-									$terms = get_the_terms( $post->ID , 'anim_project_name' );
+
+
+
+								<?php  
+									$terms = get_the_terms( $post->ID , 'anim_project_sets' );
 									if ( $terms != null ){
-										echo '<tr><th>Projects</th><td>';
+										echo '<tr><th>Project sets</th><td>';
 										foreach( $terms as $term ) {
 											echo '<a href="'. get_term_link( $term ) .'" style="color:'.get_field('color').'";>'. $term->name .'</a><br>';
 										}
