@@ -25,7 +25,7 @@ function berry_remove_sidebar(){
 add_action( 'widgets_init', 'berry_remove_sidebar', 11 );
 
 /**
- * Enqueue scripts and styles.
+ * Anim Enqueue scripts and styles.
  */
 function berry_scripts() {
 
