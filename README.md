@@ -1,9 +1,9 @@
 # ponlgnan
-Wordpress themes - ponlgnan modify by iworn studio
+Wordpress themes - Anim Showcase modify by iworn studio
 
-[![Build Status](https://travis-ci.org/WordPress/twentynineteen.svg?branch=master)](https://travis-ci.org/WordPress/twentynineteen)
+[![Build Status](https://travis-ci.org/niyata/ponlgnan.svg?branch=master)](https://travis-ci.org/niyata/ponlgnan)
 
-**Contributors:** the WordPress team  
+**Contributors:** the Animdata team  
 **Requires at least:** WordPress 4.9.6  
 **Tested up to:** WordPress 4.9.8  
 **Version:** 1.0  
@@ -13,20 +13,20 @@ Wordpress themes - ponlgnan modify by iworn studio
 
 ## Description
 
-Twenty Nineteen is a Gutenberg-ready theme for WordPress.
+Anim Showcase is a Gutenberg-ready theme for WordPress.
 
 ## Installation
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Twenty Nineteen in the search form and press the 'Enter' key on your keyboard.
+2. Type in Anim Showcase in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Go to https://codex.wordpress.org/Twenty_Nineteen for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 ## Copyright
 
-Twenty Nineteen WordPress Theme, Copyright 2018 WordPress.org
-Twenty Nineteen is distributed under the terms of the GNU GPL.
+Anim Showcase WordPress Theme, Copyright 2018 WordPress.org
+Anim Showcase is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Twenty Nineteen bundles the following third-party resources:
+Anim Showcase bundles the following third-party resources:
 
 _s, Copyright 2015-2018 Automattic, Inc.
 **License:** GPLv2 or later
