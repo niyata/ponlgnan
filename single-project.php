@@ -57,7 +57,7 @@ get_header(); ?>
 								<?php   
 									$terms = get_the_terms( $post->ID , 'project_category' );
 									if ( $terms != null ){
-										echo '<tr><th>Division</th><td>';
+										echo '<tr><th>Type</th><td>';
 										foreach( $terms as $term ) {
 											if (($term->slug) != 'featured') {
 												echo '<a href="'. get_term_link( $term ) .'" style="color:'.get_field('color').'";>'. $term->name .'</a><br>';
