@@ -85,7 +85,7 @@ get_header(); ?>
 									} 
 								?>
 								
-								<tr><th>Color</th><td><span class="project-color" style="background-color: <?php get_field('color'); ?>;"></span></td></tr>
+								<tr><th>Color</th><td><span class="project-color" style="background-color: <?php the_field('color'); ?>;"></span></td></tr>
 								
 								</table>
 						</div>

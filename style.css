@@ -216,16 +216,15 @@ table.table-bordered th, table.table-bordered tr, table.table-bordered td{
 .site.-header-desktop-standard .site-header {
     height: auto;
 	position: absolute;
-	background: #00989a;
-/*iworn create gradient vertical  @see : https://www.cssmatic.com/gradient-generator*/
-	/*background: rgba(0,152,154,0);*/
-	background: -moz-linear-gradient(top, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%); /* FF3.6+ */
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,152,154,0)), color-stop(22%, rgba(219,219,219,0.31)), color-stop(40%, rgba(210,210,210,0.48)), color-stop(41%, rgba(209,209,209,0.49)), color-stop(85%, rgba(0,152,154,1)));/* Chrome, Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%); /* IE 10+ */
-	background: linear-gradient(to bottom, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%);/* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00989a', endColorstr='#00989a', GradientType=0 );/* IE6-9 */
+/* iworn create gradient vertical  @see : https://www.cssmatic.com/ | short url : http://tinyurl.com/y6u3naqp */
+	background: rgba(0,151,154,1);
+	background: -moz-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,151,154,1)), color-stop(54%, rgba(0,151,154,0.34)), color-stop(82%, rgba(209,209,209,0)));
+	background: -webkit-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: -o-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: -ms-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: linear-gradient(to bottom, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00979a', endColorstr='#d1d1d1', GradientType=0 );
 }
 .site-desktop-navigation .current-menu-item a {
     color: #54cacc;
