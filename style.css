@@ -9,6 +9,13 @@
 
 /* HEADER */ 
 
+.site-header {
+    color: #b2b2b2;
+}
+.site-header-space {
+	margin-bottom: 15px;
+}
+
 .site-desktop-navigation {
 	margin: 20px 0 5px;
 }
@@ -22,9 +29,6 @@
 .site-desktop-navigation .current-menu-item a {
 	color: #888;
 	border-bottom: 1px dotted #ccc;
-}
-.site-header-space {
-	margin-bottom: 15px;
 }
 
 /* ARCHIVE */
@@ -70,6 +74,16 @@
 
 /* SINGLE */
 
+/** * Font */
+
+.col-sm-9, .site-description {
+    font-family: "Trirong", sans-serif!important;
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 1.8;
+	margin: 0 0 15px;
+}
+
 .entry-img img {
 	width: 100%;
 }
@@ -80,17 +94,26 @@ body.single .entry-title {
 	display: inline-block;
 	padding: 6px 15px 4px;
 	margin: 30px 0;
+	border-radius: 5px;
 	
 }
 body.single .site-header-space {
 	margin-bottom: 0;
 }
 
+body.btn-primary {
+    border-color: #ef7725!important;
+}
+#page #content .button.alt, body.btn-primary {
+    background-color: #f6914c!important;
+    color: #fff;
+}
+
 /* pagination */
 .post-type-pagination{
 	display: block;
 	margin: 0;
-	vertical-align: middle;
+	/*vertical-align: middle;*/
 	font-size: 14px;
 	line-height: 22px;
 
@@ -126,11 +149,25 @@ text-align: center;
 }
 
 /*TERM Post type*/
-table.table-bordered p, table.table-bordered a{ 
-	color: #343954
-	background-color : rgba(206, 206, 206, 03);
-	/*mix-blend-mode: difference;*/
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+	border-color: inherit;
 
+}
+table {
+	border-collapse: collapse;
+	border-radius: 1rem;
+	overflow: hidden;
+  }
+
+
+table.table-bordered th, table.table-bordered tr, table.table-bordered td{ 
+	text-align: center;
+	vertical-align: middle;	
+	background-color:  rgba(206, 206, 206, 03);
+	border: rgba(206, 206, 206, 03);
+	mix-blend-mode: darken;
 }
 
 /* FOOTER */
@@ -175,12 +212,32 @@ table.table-bordered p, table.table-bordered a{
 	}
 }
 
-/** 
-* Font
-*/
+@media (min-width: 992px){
+.site.-header-desktop-standard .site-header {
+    height: auto;
+	position: absolute;
+	background: #00989a;
+/*iworn create gradient vertical  @see : https://www.cssmatic.com/gradient-generator*/
+	/*background: rgba(0,152,154,0);*/
+	background: -moz-linear-gradient(top, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%); /* FF3.6+ */
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,152,154,0)), color-stop(22%, rgba(219,219,219,0.31)), color-stop(40%, rgba(210,210,210,0.48)), color-stop(41%, rgba(209,209,209,0.49)), color-stop(85%, rgba(0,152,154,1)));/* Chrome, Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%); /* IE 10+ */
+	background: linear-gradient(to bottom, rgba(0,152,154,0) 0%, rgba(219,219,219,0.31) 22%, rgba(210,210,210,0.48) 40%, rgba(209,209,209,0.49) 41%, rgba(0,152,154,1) 85%);/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00989a', endColorstr='#00989a', GradientType=0 );/* IE6-9 */
+}
+.site-desktop-navigation .current-menu-item a {
+    color: #54cacc;
+    border-bottom: 1px dotted #ccc;
+}
+}
 
-body.col-sm-9 {
-    font-family: "Trirong", sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
+.content-pagination .current {
+    color: rgb(246, 145, 76)!important;
+    border: 2px solid rgb(246, 145, 76)!important;
+}
+.content-pagination a {
+    color: rgba(246, 145, 76, 0.83)!important;
+    border: 2px solid rgba(0,0,0,0.1)!important;
 }

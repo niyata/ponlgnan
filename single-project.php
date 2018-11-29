@@ -48,8 +48,14 @@ get_header(); ?>
 							
 							<!-- add avatar , author -->
 							<tr><th id="anim-avatar"><?php echo get_avatar(get_the_author_meta('ID'), 76 )?> </th>
-							<td class="author-show"><strong>สร้างสรรค์โดย:&nbsp;<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
-							<?php echo get_the_author_meta('user_nicename') ?></a></strong></p></td></tr>
+								<td><span class="author-show">
+										<strong>สร้างสรรค์โดย:&nbsp;
+										<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
+										<?php echo get_the_author_meta('user_nicename') ?></a>
+										</strong>
+									</span>
+								</td>
+							</tr>
 							<!-- end avatar , author -->					
 							
 								<tr><th>Year</th><td><?php the_field('year'); ?></td></tr> 	
