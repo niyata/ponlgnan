@@ -74,12 +74,10 @@ get_header(); ?>
 									} 
 								?>
 
-
-
 								<?php  
 									$terms = get_the_terms( $post->ID , 'anim_project_sets' );
 									if ( $terms != null ){
-										echo '<tr><th>Project sets</th><td>';
+										echo '<tr><th>Project</th><td>';
 										foreach( $terms as $term ) {
 											echo '<a href="'. get_term_link( $term ) .'" style="color:'.get_field('color').'";>'. $term->name .'</a><br>';
 										}
@@ -87,7 +85,7 @@ get_header(); ?>
 									} 
 								?>
 								
-								<tr><th>Color</th><td><span class="project-color" style="background-color: <?php the_field('color'); ?>;"></span></td></tr>
+								<tr><th>Color</th><td><span class="project-color" style="background-color: <?php get_field('color'); ?>;"></span></td></tr>
 								
 								</table>
 						</div>
