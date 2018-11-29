@@ -68,7 +68,7 @@ get_header(); ?>
 									} 
 								?>
 								
-								<?php   // 
+								<?php  // 
 									$terms = get_the_terms( $post->ID , 'anim_project_name' );
 									if ( $terms != null ){
 										echo '<tr><th>Projects</th><td>';
