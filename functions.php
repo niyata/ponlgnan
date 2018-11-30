@@ -64,4 +64,37 @@ function cc_mime_types($mimes) {
   }
   add_filter('upload_mimes', 'cc_mime_types');
 
-  
+  /**
+   * ACF Anim Project Name - Add to Admin Column
+   */
+add_filter('manage_anim_posts_columns', 'anim_posts_columns', 4);
+add_action('manage_anim_custom_column', 'anim_custom_columns', 4,2);
+
+function anim_posts_columns($col_defaults){
+	$col_defaults['anim_proj_name_col'] = __('ชื่อโปรเจ็ค');
+	return $col_defaults;
+}
+
+function anim_posts_custom_columns($col_porj_name, $id){
+	if($col_porj_name === 'anim_proj_name_col'){
+		echo get_the_terms( 'anim_project_name' );
+	}
+}
+
+
+   /**
+	* iWorn Add Function Admin Column Thumbnail 
+	*/
+add_filter('manage_posts_columns', 'posts_columns', 5);
+add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
+
+function posts_columns($defaults){
+	$defaults['anim_post_thumbs'] = __('รูปปก');
+	return $defaults;
+}
+
+function posts_custom_columns($column_name, $id){
+	if($column_name === 'anim_post_thumbs'){
+		echo the_post_thumbnail( 'featured-thumbnail' );
+	}
+}

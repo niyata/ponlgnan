@@ -75,7 +75,7 @@ get_header(); ?>
 								?>
 
 								<?php  
-									$terms = get_the_terms( $post->ID , 'anim_project_sets' );
+									$terms = get_the_terms( $post->ID , 'anim_proj_name' );
 									if ( $terms != null ){
 										echo '<tr><th>Project</th><td>';
 										foreach( $terms as $term ) {
