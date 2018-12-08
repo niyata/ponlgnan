@@ -31,6 +31,7 @@ function berry_scripts() {
 
 	wp_dequeue_style( 'seed-style');
 	wp_enqueue_style( 'berry-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'berry-style', get_stylesheet_directory_uri() . '/css/font-awesome.min.css');
 	wp_enqueue_script( 'berry-main', get_stylesheet_directory_uri() . '/js/main.js', array(), '2016-1', true );
 	wp_enqueue_script( 'berry-main', get_stylesheet_directory_uri() . '/js/sketchfab-viewer-1.3.1.js', array(), '2016-1', true );
 
@@ -64,29 +65,11 @@ function cc_mime_types($mimes) {
   }
   add_filter('upload_mimes', 'cc_mime_types');
 
-  /**
-   * ACF Anim Project Name - Add to Admin Column
-   */
-add_filter('manage_anim_posts_columns', 'anim_posts_columns', 4);
-add_action('manage_anim_custom_column', 'anim_custom_columns', 4,2);
-
-function anim_posts_columns($col_defaults){
-	$col_defaults['anim_proj_name_col'] = __('ชื่อโปรเจ็ค');
-	return $col_defaults;
-}
-
-function anim_posts_custom_columns($col_porj_name, $id){
-	if($col_porj_name === 'anim_proj_name_col'){
-		echo get_the_terms( 'anim_project_name' );
-	}
-}
-
-
-   /**
-	* iWorn Add Function Admin Column Thumbnail 
-	*/
-add_filter('manage_posts_columns', 'posts_columns', 5);
-add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
+/**
+* iWorn Add Function Admin Column Thumbnail 
+*/
+add_filter('manage_posts_columns', 'posts_columns', 10);
+add_action('manage_posts_custom_column', 'posts_custom_columns', 10, 2);
 
 function posts_columns($defaults){
 	$defaults['anim_post_thumbs'] = __('รูปปก');
@@ -97,4 +80,52 @@ function posts_custom_columns($column_name, $id){
 	if($column_name === 'anim_post_thumbs'){
 		echo the_post_thumbnail( 'featured-thumbnail' );
 	}
+}/* # Thumbnail Column */
+
+/** แก้ปัญหาคุกกี้หน้า wp-login */
+setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
+if ( SITECOOKIEPATH != COOKIEPATH )
+	setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
+
+/**
+ * Anim Category private project_name taxonomy
+ * @package animdata 
+ */
+add_action( 'init', 'anim_private_proj_name_tax' );
+
+function anim_private_proj_name_tax() {
+    register_taxonomy(
+        'vstar-movies-2558',
+        'anim_proj_label',
+        array(
+            'label' => __( 'vstar movies 2558' ),
+            'public' => false,
+            'rewrite' => false,
+            'hierarchical' => true,
+        )
+    );
+} /** anim_private */
+
+function my_acf_result_query( $args, $field, $post )
+{
+    // eg from https://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters
+    $args['post_status'] = 'private';        
+    return $args;
 }
+
+// acf/fields/relationship/result - filter for every field
+add_filter('acf/fields/relationship/query', 'my_acf_result_query', 10, 3);
+
+/** anim post type searching */
+function anim_proj_search($template)   
+{    
+ global $wp_query;   
+ $post_type = get_query_var('post_type');   
+ if( isset($_GET['s']) && $post_type == 'project' )   
+ {
+  return locate_template('archive-search.php');  //  redirect to archive-search.php
+ }   
+ return $template;   
+}
+add_filter('template_include', 'anim_proj_search');
+/** end searching */

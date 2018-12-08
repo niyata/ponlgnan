@@ -32,6 +32,21 @@
 }
 
 /* ARCHIVE */
+.text-center {
+    text-align: center !important;
+    color: #00989a;
+}
+h1, h2, h3, h4, h5, h6, nav, .menu, .button, .price, ._heading, .site-title {
+    font-family: "Trirong", sans-serif !important;
+    font-weight: 700 !important;
+}
+
+.site-main>.page-header{
+	margin: 0;
+    border: none;
+    padding: 0;
+    color: #00989a;
+}
 
 .content-item.-caption {
 	background-color: #ff6600;
@@ -145,7 +160,7 @@ border-radius: 50%
 
 /*taxonomy text aline center*/
 th.table-bordered{
-text-align: center;
+text-align: left;
 }
 
 /*TERM Post type*/
@@ -153,51 +168,81 @@ tbody {
     display: table-row-group;
     vertical-align: middle;
 	border-color: inherit;
-
 }
+
+/*ถ้าข้อความยาว บังคับตัดคำขึ้นบรรทัดใหม่*/
+/*td.style-proj-name{
+	table-layout: fixed;
+	max-width : 70px; 
+	white-space : nowrap;
+	overflow : hidden;
+	text-overflow: ellipsis;
+}
+	  
+td.style-proj-name:hover{
+	display: contents;
+	max-width : initial; 
+	display: contents;
+    overflow-y: visible;
+}*/
+
+td.style-proj-name {
+    /*display: inline-block; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
+td.style-proj-name {
+  border: 0px solid #f0f;
+  max-width: 50px;
+}
+/* สิ้นสุดบังคับตำคำ */
+
+td.style-proj-name a{
+	color: #163D4F;	
+}
+td.style-proj-name a:hover{
+	color: #00989A;	
+}
+
 table {
 	border-collapse: collapse;
 	border-radius: 1rem;
 	overflow: hidden;
   }
-
-
 table.table-bordered th, table.table-bordered tr, table.table-bordered td{ 
-	text-align: center;
+	text-align: left;
 	vertical-align: middle;	
 	background-color:  rgba(206, 206, 206, 03);
 	border: rgba(206, 206, 206, 03);
 	mix-blend-mode: darken;
 }
+td.stye-proj-name ul {
+	padding-left: 1.5em;
+    text-indent: 0;
+    margin: 0 0 -2em!important;
+}
 
 /* FOOTER */
-
 .site-footer {
 	background: none;
 }
-
 .site-info {
 	color: #888;
 }
-
-
-
 
 @media (min-width: 992px) {
 	.site-title, .site-branding, .site-description, .site-desktop-navigation, .site-logo, .site-logo img {
 		float: none;
 	}
-	
 	.site-header {
 		box-shadow: none;
 		text-align: center;
 	}
-	
 	.site-title {
 		line-height: 1.2;
 		font-size: 28px;
 	}
-	
 	.site-description {
 		padding: 0;
 		height: auto;
@@ -205,7 +250,6 @@ table.table-bordered th, table.table-bordered tr, table.table-bordered td{
 		letter-spacing: 0.05em;
 		font-size: 14px;
 	}
-	
 	.site-logo img {
 		height: auto;
 		margin: 30px 10px 10px 0;
@@ -213,6 +257,12 @@ table.table-bordered th, table.table-bordered tr, table.table-bordered td{
 }
 
 @media (min-width: 992px){
+	
+.site-title {
+    font-family: "Cloud", sans-serif !important;
+    font-weight: 300 !important;
+}
+
 .site.-header-desktop-standard .site-header {
     height: auto;
 	position: absolute;
@@ -223,7 +273,7 @@ table.table-bordered th, table.table-bordered tr, table.table-bordered td{
 	background: -webkit-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
 	background: -o-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
 	background: -ms-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
-	background: linear-gradient(to bottom, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: linear-gradient(to bottom, rgb(0, 151, 154) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00979a', endColorstr='#d1d1d1', GradientType=0 );
 }
 .site-desktop-navigation .current-menu-item a {

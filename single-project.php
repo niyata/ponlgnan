@@ -16,11 +16,11 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<div class="entry-img"><?php the_post_thumbnail('full'); ?></div>
+						<div class="container entry-img"><?php the_post_thumbnail('full'); ?></div>
 						
 			<div class="container">
 				<header class="entry-header">
-					<h1 class="entry-title" style="background-color: <?php the_field('color'); ?>;"><?php the_title(); ?></h1>
+					<h1 class="entry-title" style="background-color: <?php the_field('color'); ?>;"><?php echo "<i class='fab fa-font-awesome'></i> "; ?><?php the_title(); ?></h1>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
@@ -56,7 +56,7 @@ get_header(); ?>
 									</span>
 								</td>
 							</tr>
-							<!-- end anim avatar , author -->					
+							<!-- end anim avatar , or anim author -->					
 							
 								<tr><th>Year</th><td><?php the_field('year'); ?></td></tr> 	
 								
@@ -74,19 +74,24 @@ get_header(); ?>
 									} 
 								?>
 
-								<?php  
-									$terms = get_the_terms( $post->ID , 'anim_proj_name' );
+								<?php 
+									
+									$terms = get_the_terms( $post->ID , 'anim_project_name' );
+									$proj_count = $term->post_count;
+									$proj_count= 0;
+									$proj_count++;
+									
 									if ( $terms != null ){
-										echo '<tr><th>Project</th><td>';
-										foreach( $terms as $term ) {
-											echo '<a href="'. get_term_link( $term ) .'" style="color:'.get_field('color').'";>'. $term->name .'</a><br>';
-										}
+										echo '<tr class="anim-proj-row"><th>Project</th>
+												<td class="style-proj-name">';
+												foreach( $terms as $term ) {
+													echo '<ul style="margin: 0 0 -0em; color:'.get_field(color).'";>
+													<li><a href="'.get_term_link( $term ) .'" style="color:'.get_field('color').'";>'. $term->name .'</a></li></ul>';
+												}
 										echo '</td></tr>';
-									} 
+									}
 								?>
-								
 								<tr><th>Color</th><td><span class="project-color" style="background-color: <?php the_field('color'); ?>;"></span></td></tr>
-								
 								</table>
 						</div>
 					</div>
