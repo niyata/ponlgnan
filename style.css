@@ -9,6 +9,13 @@
 
 /* HEADER */ 
 
+.site-header {
+    color: #b2b2b2;
+}
+.site-header-space {
+	margin-bottom: 15px;
+}
+
 .site-desktop-navigation {
 	margin: 20px 0 5px;
 }
@@ -23,11 +30,23 @@
 	color: #888;
 	border-bottom: 1px dotted #ccc;
 }
-.site-header-space {
-	margin-bottom: 15px;
-}
 
 /* ARCHIVE */
+.text-center {
+    text-align: center !important;
+    color: #00989a!important;
+}
+h1, h2, h3, h4, h5, h6, nav, .menu, .button, .price, ._heading, .site-title {
+    font-family: "Trirong", sans-serif !important;
+    font-weight: 700 !important;
+}
+
+.site-main>.page-header{
+	margin: 0;
+    border: none;
+    padding: 0;
+    color: #00989a;
+}
 
 .content-item.-caption {
 	background-color: #ff6600;
@@ -70,27 +89,69 @@
 
 /* SINGLE */
 
+/** * Font */
+
+.col-sm-9, .site-description {
+    font-family: "Trirong", sans-serif!important;
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 1.8;
+	margin: 0 0 15px;
+}
+
 .entry-img img {
 	width: 100%;
 }
 
 body.single .entry-title {
-	background-color: #ff6600;
 	color: #fff;
 	display: inline-block;
 	padding: 6px 15px 4px;
 	margin: 30px 0;
+	border-radius: 5px;
 	
 }
+
 body.single .site-header-space {
 	margin-bottom: 0;
 }
+
+body.btn-primary {
+    border-color: #ef7725!important;
+}
+#page #content .button.alt, body.btn-primary {
+    background-color: #f6914c!important;
+    color: #fff;
+}
+
+/* pagination */
+.post-type-pagination{
+	display: block;
+	margin: 0;
+	/*vertical-align: middle;*/
+	font-size: 14px;
+	line-height: 22px;
+
+}
+a.single-pre{
+	float: left;
+	text-align:left;
+}
+a.single-next{
+	float: right;
+	text-align:right;
+}
+/* project box */
 .project-color{
 	display: inline-block;
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
 	
+}
+table.author-show td {
+	text-transform:uppercase;
+	font-style: bold;
 }
 #anim-avatar img{
 border-radius: 50%
@@ -99,45 +160,89 @@ border-radius: 50%
 
 /*taxonomy text aline center*/
 th.table-bordered{
-text-align: center;
+text-align: left;
 }
 
 /*TERM Post type*/
-p.table-bordered, .table-bordered a{ 
-	color: #343954
-	background-color : rgba(206, 206, 206, 03);
-	mix-blend-mode: difference;
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+	border-color: inherit;
+}
 
+/*ถ้าข้อความยาว บังคับตัดคำขึ้นบรรทัดใหม่*/
+/*td.style-proj-name{
+	table-layout: fixed;
+	max-width : 70px; 
+	white-space : nowrap;
+	overflow : hidden;
+	text-overflow: ellipsis;
+}
+	  
+td.style-proj-name:hover{
+	display: contents;
+	max-width : initial; 
+	display: contents;
+    overflow-y: visible;
+}*/
+
+td.style-proj-name {
+    /*display: inline-block; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
+td.style-proj-name {
+  border: 0px solid #f0f;
+  max-width: 50px;
+}
+/* สิ้นสุดบังคับตำคำ */
+
+td.style-proj-name a{
+	color: #163D4F;	
+}
+td.style-proj-name a:hover{
+	color: #00989A;	
+}
+
+table {
+	border-collapse: collapse;
+	border-radius: 1rem;
+	overflow: hidden;
+  }
+table.table-bordered th, table.table-bordered tr, table.table-bordered td{ 
+	text-align: left;
+	vertical-align: middle;	
+	background-color:  rgba(206, 206, 206, 03);
+	border: rgba(206, 206, 206, 03);
+	mix-blend-mode: darken;
+}
+td.stye-proj-name ul {
+	padding-left: 1.5em;
+    text-indent: 0;
+    margin: 0 0 -2em!important;
 }
 
 /* FOOTER */
-
 .site-footer {
 	background: none;
 }
-
 .site-info {
 	color: #888;
 }
-
-
-
 
 @media (min-width: 992px) {
 	.site-title, .site-branding, .site-description, .site-desktop-navigation, .site-logo, .site-logo img {
 		float: none;
 	}
-	
 	.site-header {
 		box-shadow: none;
 		text-align: center;
 	}
-	
 	.site-title {
 		line-height: 1.2;
 		font-size: 28px;
 	}
-	
 	.site-description {
 		padding: 0;
 		height: auto;
@@ -145,9 +250,43 @@ p.table-bordered, .table-bordered a{
 		letter-spacing: 0.05em;
 		font-size: 14px;
 	}
-	
 	.site-logo img {
 		height: auto;
 		margin: 30px 10px 10px 0;
 	}
+}
+
+@media (min-width: 992px){
+	
+.site-title {
+    font-family: "Cloud", sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.site.-header-desktop-standard .site-header {
+    height: auto;
+	position: absolute;
+/* iworn create gradient vertical  @see : https://www.cssmatic.com/ | short url : http://tinyurl.com/y6u3naqp */
+	background: rgba(0,151,154,1);
+	background: -moz-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,151,154,1)), color-stop(54%, rgba(0,151,154,0.34)), color-stop(82%, rgba(209,209,209,0)));
+	background: -webkit-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: -o-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: -ms-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: linear-gradient(to bottom, rgb(0, 151, 154) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00979a', endColorstr='#d1d1d1', GradientType=0 );
+}
+.site-desktop-navigation .current-menu-item a {
+    color: #54cacc;
+    border-bottom: 1px dotted #ccc;
+}
+}
+
+.content-pagination .current {
+    color: rgb(246, 145, 76)!important;
+    border: 2px solid rgb(246, 145, 76)!important;
+}
+.content-pagination a {
+    color: rgba(246, 145, 76, 0.83)!important;
+    border: 2px solid rgba(0,0,0,0.1)!important;
 }
