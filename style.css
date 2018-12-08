@@ -9,6 +9,13 @@
 
 /* HEADER */ 
 
+.site-header {
+    color: #b2b2b2;
+}
+.site-header-space {
+	margin-bottom: 15px;
+}
+
 .site-desktop-navigation {
 	margin: 20px 0 5px;
 }
@@ -22,9 +29,6 @@
 .site-desktop-navigation .current-menu-item a {
 	color: #888;
 	border-bottom: 1px dotted #ccc;
-}
-.site-header-space {
-	margin-bottom: 15px;
 }
 
 /* ARCHIVE */
@@ -70,27 +74,69 @@
 
 /* SINGLE */
 
+/** * Font */
+
+.col-sm-9, .site-description {
+    font-family: "Trirong", sans-serif!important;
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 1.8;
+	margin: 0 0 15px;
+}
+
 .entry-img img {
 	width: 100%;
 }
 
 body.single .entry-title {
-	background-color: #ff6600;
 	color: #fff;
 	display: inline-block;
 	padding: 6px 15px 4px;
 	margin: 30px 0;
+	border-radius: 5px;
 	
 }
+
 body.single .site-header-space {
 	margin-bottom: 0;
 }
+
+body.btn-primary {
+    border-color: #ef7725!important;
+}
+#page #content .button.alt, body.btn-primary {
+    background-color: #f6914c!important;
+    color: #fff;
+}
+
+/* pagination */
+.post-type-pagination{
+	display: block;
+	margin: 0;
+	/*vertical-align: middle;*/
+	font-size: 14px;
+	line-height: 22px;
+
+}
+a.single-pre{
+	float: left;
+	text-align:left;
+}
+a.single-next{
+	float: right;
+	text-align:right;
+}
+/* project box */
 .project-color{
 	display: inline-block;
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
 	
+}
+table.author-show td {
+	text-transform:uppercase;
+	font-style: bold;
 }
 #anim-avatar img{
 border-radius: 50%
@@ -103,11 +149,25 @@ text-align: center;
 }
 
 /*TERM Post type*/
-p.table-bordered, .table-bordered a{ 
-	color: #343954
-	background-color : rgba(206, 206, 206, 03);
-	mix-blend-mode: difference;
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+	border-color: inherit;
 
+}
+table {
+	border-collapse: collapse;
+	border-radius: 1rem;
+	overflow: hidden;
+  }
+
+
+table.table-bordered th, table.table-bordered tr, table.table-bordered td{ 
+	text-align: center;
+	vertical-align: middle;	
+	background-color:  rgba(206, 206, 206, 03);
+	border: rgba(206, 206, 206, 03);
+	mix-blend-mode: darken;
 }
 
 /* FOOTER */
@@ -150,4 +210,33 @@ p.table-bordered, .table-bordered a{
 		height: auto;
 		margin: 30px 10px 10px 0;
 	}
+}
+
+@media (min-width: 992px){
+.site.-header-desktop-standard .site-header {
+    height: auto;
+	position: absolute;
+/* iworn create gradient vertical  @see : https://www.cssmatic.com/ | short url : http://tinyurl.com/y6u3naqp */
+	background: rgba(0,151,154,1);
+	background: -moz-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,151,154,1)), color-stop(54%, rgba(0,151,154,0.34)), color-stop(82%, rgba(209,209,209,0)));
+	background: -webkit-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: -o-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: -ms-linear-gradient(top, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	background: linear-gradient(to bottom, rgba(0,151,154,1) 0%, rgba(0,151,154,0.34) 54%, rgba(209,209,209,0) 82%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00979a', endColorstr='#d1d1d1', GradientType=0 );
+}
+.site-desktop-navigation .current-menu-item a {
+    color: #54cacc;
+    border-bottom: 1px dotted #ccc;
+}
+}
+
+.content-pagination .current {
+    color: rgb(246, 145, 76)!important;
+    border: 2px solid rgb(246, 145, 76)!important;
+}
+.content-pagination a {
+    color: rgba(246, 145, 76, 0.83)!important;
+    border: 2px solid rgba(0,0,0,0.1)!important;
 }
